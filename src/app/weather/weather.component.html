@@ -1,0 +1,25 @@
+<div class="weather-container" *ngIf="weather">
+  <h1>Weather for {{ weather.location?.name }}</h1>
+  <div class="weather-info">
+    <h2>
+      <span><i class="material-icons">home</i> City:</span>
+      {{ weather.location?.name }} - {{ weather.location?.country }}
+    </h2>
+    <h2>
+      <span><i class="material-icons">wb_sunny</i> Temperature:</span>
+      {{ weather.current?.temp_c }}°C
+    </h2>
+    <h2>
+      <span><i class="material-icons">cloud</i> Condition:</span>
+      {{ weather.current?.condition?.text }}
+    </h2>
+    <h2>
+      <span><i class="material-icons">opacity</i> Humidity:</span>
+      {{ weather.current?.humidity }}%
+    </h2>
+    <h2>
+      <span><i class="material-icons">air</i> Wind Speed:</span>
+      {{ weather.current?.wind_kph }} km/h
+    </h2>
+  </div>
+</div>

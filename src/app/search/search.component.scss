@@ -1,0 +1,41 @@
+.search-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 100px;
+
+  input {
+    margin-bottom: 10px;
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px 10px;
+    font-size: larger;
+  }
+  input:hover {
+    border: 5px solid blue;
+  }
+
+  input:focus {
+    outline: none;
+    border: 5px solid blue;
+  }
+
+  button {
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #120f5a;
+    color: #fff;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: blue;
+    color: white;
+  }
+}
