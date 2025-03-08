@@ -1,0 +1,27 @@
+<div class="all_page">
+  <div class="container pt-5">
+    <div class="row pt-5 pb-5">
+      <div class="col-md-2"></div>
+      <div class="col-md-10">
+        <h1 class="text-center pb-4">Send your file to verify its validity</h1>
+        <form class="text-center" (ngSubmit)="onclick($event)">
+          <input
+            type="file"
+            class="form-control file-upload"
+            id="file-upload"
+            (change)="onFileSelected($event)"
+            accept=".pdf"
+          />
+          <button type="submit" class="btn btn-primary mt-3 submit-btn">
+            Send
+          </button>
+        </form>
+
+        <div id="pdf-preview" class="mt-4" *ngIf="pdfUrl">
+          <iframe [src]="pdfUrl" width="100%" height="600px"></iframe>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://lib0z7zbhb.execute-api.eu-central-1.amazonaws.com/dev/api/auth/login",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

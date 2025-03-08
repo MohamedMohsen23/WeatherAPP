@@ -1,0 +1,218 @@
+<div>
+  <div class="home-nav pt-2">
+    <nav class="navbar navbar-expand-lg container">
+      <div class="container-fluid">
+        <h2 class="navbar-brand logo fw-bold">ChatIn</h2>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse links justify-content-end fs-5"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link mx-1" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-1" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-1" routerLink="/login" *ngIf="!isLoggedIn()"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link mx-1"
+                routerLink="/home"
+                *ngIf="isLoggedIn()"
+                >My Profile</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-1" routerLink="/home" *ngIf="isLoggedIn()"
+                >LogOut</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container home-text pb-5">
+      <div class="row">
+        <div class="col-md-7 pb-3">
+          <h1 style="color: #8d8383; font-size: 75px" class="pt-4">
+            Have your best <br />
+            chat
+          </h1>
+          <p style="color: #ada3a3" class="pb-4">
+            Fast, easy & unlimited conferece call services
+          </p>
+          <a href="" class="mx-2"
+            ><button type="button" class="btn btn-outline-primary">
+              Get Started
+            </button></a
+          >
+          <a href=""
+            ><button type="button" class="btn btn-outline-primary">
+              Get a Demo
+            </button></a
+          >
+        </div>
+        <div class="col-md-5">
+          <div class="row person1 pb-2">
+            <img
+              class="col-md-5 pr-1 photo-person"
+              src="assets/Image/Home/person1.jpeg"
+              alt=""
+            />
+            <p style="font-size: 10px" class="col-md-5">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />Dolor
+              mollis leo proin turpis eu hac. Tortor dolor eu at<br />
+              bibendum suspendisse. <span>12:30 PM</span>
+            </p>
+          </div>
+          <div class="row person2">
+            <p style="font-size: 10px" class="col-md-5 pr-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />Dolor
+              mollis leo proin turpis eu hac. Tortor dolor eu at<br />
+              bibendum suspendisse. <span>12:30 PM</span>
+            </p>
+            <img
+              class="col-md-5 photo-person"
+              src="assets/Image/Home/person2.jpeg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container instant pb-5 text-center">
+    <h2 class="text-center fw-bold pt-5">Instant Conference Calls</h2>
+    <p class="text-center col-md-5 mx-auto pb-4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+      pellentesque vulputate sapien id accumsan. Phasellus luctus nisi felis, in
+      placerat urna convallis vitae.
+    </p>
+    <img
+      src="assets/Image/Home/chatpage.jpg"
+      alt=""
+      class="col-md-10 pb-5 chat-photo"
+    />
+  </div>
+
+  <div class="contact" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="photo-team col-md-6 pt-5">
+          <img
+            src="assets/Image/Home/contact.jpg"
+            alt=""
+            class="contact-photo py-5"
+          />
+        </div>
+        <div class="col-md-6 pt-5" style="padding-left: 4rem">
+          <h2 class="fw-bold pl-5 pt-5 pb-5">
+            A big project for the university
+          </h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="d-flex pb-3">
+            <a href="" class="mx-2">
+              <button type="button" class="btn btn-outline-primary">
+                Get Contact
+              </button>
+            </a>
+            <a href="">
+              <button type="button" class="btn btn-outline-primary">
+                Get a Demo
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer pt-5">
+    <footer class="bg-body text-center">
+      <div class="container p-4">
+        <!-- <section class="mb-4">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+            repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum
+            harum corrupti dicta, aliquam sequi voluptate quas.
+          </p>
+        </section> -->
+
+        <section>
+          <div class="row pb-3">
+            <div class="col-lg-4 col-md-12 col-sm-12 mb-4 mb-md-0">
+              <h1 style="color: #657570">ChatIn</h1>
+              <p class="text-muted mb-0 pb-2">
+                The last team chat you <br />
+                will ever need
+              </p>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Help</h5>
+              <ul class="list-unstyled mb-0">
+                <li><a class="text-body" href="#!">Support</a></li>
+                <li><a class="text-body" href="#!">Knowledge Base</a></li>
+                <li><a class="text-body" href="#!">Tutorials</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Features</h5>
+              <ul class="list-unstyled mb-0">
+                <li><a class="text-body" href="#!">Screen Sharing</a></li>
+                <li><a class="text-body" href="#!">iOS & Android Apps</a></li>
+                <li><a class="text-body" href="#!">File Sharing</a></li>
+                <li><a class="text-body" href="#!">User Management</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Company</h5>
+              <ul class="list-unstyled mb-0">
+                <li><a class="text-body" href="#!">About Us</a></li>
+                <li><a class="text-body" href="#!">Careers</a></li>
+                <li><a class="text-body" href="#!">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Contact Us</h5>
+              <ul class="list-unstyled mb-0">
+                <li><a class="text-body" href="#!">info&#64;chatapp.com</a></li>
+                <li><a class="text-body" href="#!">1-800-200-300</a></li>
+                <li>
+                  <a class="text-body" href="#!"
+                    >3500 Deer Creek Rd Palo Alto, CA</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="text-center p-3" style="background-color: #d1e6ff">
+        © 2020 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
+          >chatIn.com</a
+        >
+      </div>
+    </footer>
+  </div>
+</div>

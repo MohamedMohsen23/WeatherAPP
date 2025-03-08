@@ -1,0 +1,75 @@
+<div class="sidenav container" #sidenav>
+  <div class="row">
+    <img src="assets/Image/Logo.png" alt="Logo" class="logo col-md-5" />
+    <h3
+      class="col-md-6"
+      style="
+        color: #555758;
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 10px;
+      "
+    >
+      ChatIn
+    </h3>
+    <button class="hamburger-btn" (click)="toggleSidenav()">
+      <i class="bi bi-list"></i>
+    </button>
+    <br />
+  </div>
+  <br />
+
+  <div class="nav-links" id="navLinks">
+    <a
+      routerLink="/home/dashboard"
+      routerLinkActive="active"
+      style="font-size: 22px"
+    >
+      <i class="bi bi-speedometer2" style="font-size: 20px"></i> Dashboard
+    </a>
+    <br />
+
+    <a
+      routerLink="/home/chat"
+      style="font-size: 22px"
+      routerLinkActive="active"
+    >
+      <i class="bi bi-chat-dots" style="font-size: 20px"></i> Chat
+    </a>
+    <br />
+
+    <a
+      routerLink="/home/document"
+      style="font-size: 22px"
+      routerLinkActive="active"
+    >
+      <i class="bi bi-file-earmark-text" style="font-size: 20px"></i> Document
+    </a>
+    <br />
+
+    <a
+      routerLink="/home/verify"
+      style="font-size: 22px"
+      routerLinkActive="active"
+    >
+      <i class="bi bi-check-circle" style="font-size: 20px"></i> verify
+    </a>
+    <br />
+    <a
+      routerLink="/home/announcement"
+      style="font-size: 22px"
+      routerLinkActive="active"
+    >
+      <i class="bi bi-megaphone" style="font-size: 20px"></i> Announcements
+    </a>
+    <br />
+
+    <a
+      routerLink="/home/setting"
+      style="font-size: 22px"
+      routerLinkActive="active"
+    >
+      <i class="bi bi-gear" style="font-size: 20px"></i> Setting
+    </a>
+  </div>
+</div>

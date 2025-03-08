@@ -1,0 +1,216 @@
+<div class="all_page">
+  <div class="container pt-5">
+    <div class="row justify-content-center pt-5 pb-5">
+      <div class="col-md-2"></div>
+      <div class="col-md-3 d-flex flex-column align-items-center">
+        <img
+          src="assets/Image/dashboard/professors.png"
+          alt=""
+          class="professor"
+        />
+        <button
+          class="btn mt-3 w-100"
+          [ngClass]="{
+            'btn-info': isCollapsed.professors,
+            'btn-primary': !isCollapsed.professors
+          }"
+          (click)="toggleCollapse('professors')"
+          [attr.aria-expanded]="isCollapsed.professors"
+        >
+          Professors
+        </button>
+      </div>
+
+      <div class="col-md-3 d-flex flex-column align-items-center">
+        <img
+          src="assets/Image/dashboard/students.png"
+          alt=""
+          class="professor"
+        />
+        <button
+          class="btn mt-3 w-100"
+          [ngClass]="{
+            'btn-info': isCollapsed.students,
+            'btn-primary': !isCollapsed.students
+          }"
+          (click)="toggleCollapse('students')"
+          [attr.aria-expanded]="isCollapsed.students"
+        >
+          Students
+        </button>
+      </div>
+
+      <div class="col-md-3 d-flex flex-column align-items-center">
+        <img
+          src="assets/Image/dashboard/Teaching Assistants.png"
+          alt=""
+          class="professor"
+        />
+        <button
+          class="btn mt-3 w-100"
+          [ngClass]="{
+            'btn-info': isCollapsed.teachingAssistants,
+            'btn-primary': !isCollapsed.teachingAssistants
+          }"
+          (click)="toggleCollapse('teachingAssistants')"
+          [attr.aria-expanded]="isCollapsed.teachingAssistants"
+        >
+          Teaching Assistants
+        </button>
+      </div>
+    </div>
+
+    <div class="row pb-5">
+      <div class="col-md-2"></div>
+
+      <div class="col-md-10">
+        <div
+          class="collapse"
+          [ngClass]="{ show: isCollapsed.professors }"
+          id="professors"
+        >
+          <div class="card card-body">
+            <div class="d-flex justify-content-end">
+              <input
+                type="text"
+                class="form-control"
+                style="width: 20vh; margin-right: 5vh; padding-right: 10vh"
+                value="# {{ counter }}"
+                readonly
+              />
+              <button
+                type="button"
+                class="btn btn-primary col-md-2"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Add new
+              </button>
+            </div>
+
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Invite Doctors
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <form (ngSubmit)="onInvite()">
+                    <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="username" class="form-label">Name</label>
+                        <input
+                          type="text"
+                          id="username"
+                          class="form-control"
+                          placeholder="Enter doctor's name"
+                          [(ngModel)]="inviteObject.username"
+                          name="username"
+                          required
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input
+                          type="email"
+                          id="email"
+                          class="form-control"
+                          placeholder="Enter doctor's email"
+                          [(ngModel)]="inviteObject.email"
+                          name="email"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="submit"
+                        class="btn btn-primary"
+                        [disabled]="isLoading"
+                      >
+                        <span *ngIf="isLoading; else sendText">
+                          <i class="fas fa-spinner fa-spin"></i> Sending...
+                        </span>
+                        <ng-template #sendText>Send</ng-template>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover pb-5 text-center text-muted">
+                <thead>
+                  <tr class="text-muted">
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">isActive</th>
+                    <th scope="col">createdAt</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let prof of professors; let i = index">
+                    <th scope="row" class="text-muted">{{ i + 1 }}</th>
+                    <td class="">{{ prof.user.username }}</td>
+                    <td class="">{{ prof.user.email }}</td>
+                    <td class="">{{ prof.user.isActive }}</td>
+                    <td class="">
+                      {{ prof.user.createdAt | date : "medium" }}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p *ngIf="isLoading" class="text-center text-info">Loading...</p>
+            <p
+              *ngIf="!isfetch && professors.length === 0"
+              class="text-center text-muted"
+            >
+              No data available.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2"></div>
+      <div class="col-md-10">
+        <div
+          class="collapse"
+          [ngClass]="{ show: isCollapsed.students }"
+          id="students"
+        >
+          <div class="card card-body">
+            Some placeholder content for the students section.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2"></div>
+      <div class="col-md-10">
+        <div
+          class="collapse"
+          [ngClass]="{ show: isCollapsed.teachingAssistants }"
+          id="teachingAssistants"
+        >
+          <div class="card card-body">
+            Some placeholder content for the teaching assistants section.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

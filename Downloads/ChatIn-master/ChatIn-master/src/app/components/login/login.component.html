@@ -1,0 +1,63 @@
+<div class="form1">
+  <a routerLink="/">
+    <span class="close-btn">&times;</span>
+  </a>
+  <div class="form2">
+    <div class="form3 login">
+      <h2>Login</h2>
+      <form (ngSubmit)="onLogin()">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email"
+          [(ngModel)]="loginObject.email"
+          required
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter your password"
+          required
+          [(ngModel)]="loginObject.password"
+        />
+        <a href="">Forget Password?</a>
+        <button type="submit" [disabled]="isLoading">
+          <span *ngIf="isLoading; else loginText">
+            <i class="fas fa-spinner fa-spin"></i> Loading...
+          </span>
+          <ng-template #loginText> Login </ng-template>
+        </button>
+        <p>Don't have an account? <a routerLink="/signup">Register</a></p>
+      </form>
+    </div>
+    <img
+      src="assets/Image/Login/image1.png"
+      alt="Image Description"
+      class="image2"
+    />
+    <img
+      src="assets/Image/Login/image2.png"
+      alt="Image Description"
+      class="image3"
+    />
+    <img
+      src="assets/Image/Login/image3.png"
+      alt="Image Description"
+      class="image4"
+    />
+  </div>
+  <img
+    src="assets/Image/Login/image1.png"
+    alt="Image Description"
+    class="image1"
+  />
+  <img
+    src="assets/Image/Login/image4.png"
+    alt="Image Description"
+    class="image5"
+  />
+</div>

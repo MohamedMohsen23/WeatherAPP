@@ -1,0 +1,84 @@
+body {
+  overflow-x: hidden;
+}
+.home-nav {
+  background-color: #d1e6ff;
+}
+nav .links {
+  justify-content: flex-end;
+  margin-right: 15vh;
+}
+.logo {
+  padding: 3px 10px;
+  transition: background-color 0.8s ease;
+  border-radius: 20px;
+  font-size: 30px;
+  color: #54519f;
+}
+nav a:hover {
+  padding: 3px 10px;
+  transition: background-color 0.8s ease;
+  filter: drop-shadow(0px 4px 1px rgba(14, 23, 27, 0.5));
+  background-color: #fff;
+  border-radius: 20px;
+  color: #000;
+}
+
+// جزء الصور والكلام تحت الناف بار
+.home-text {
+  padding-top: 12vh;
+}
+
+.photo-person {
+  padding-top: 1vh;
+  width: 25vh;
+  height: 30vh;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.person1 p,
+.person2 p {
+  padding-top: 1vh;
+  background-color: #a2d8e4;
+  text-align: left;
+  padding: 1vh 0vh 1vh 2vh;
+  height: 9vh;
+  width: 40vh;
+  border: 1px solid #488787;
+  border-radius: 3vh;
+  span {
+    color: white;
+    text-align: right;
+    font-size: 7px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin: 0 0 0 17vh;
+  }
+}
+// جزء الوصف + صورة الشات
+.chat-photo {
+  max-width: 100%;
+  height: auto;
+}
+//contact
+
+.contact {
+  background-color: rgb(40, 111, 147, 0.1);
+}
+.contact-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 20%;
+}
+
+//footer
+section a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.84);
+  font-size: 14px;
+}
+h5 {
+  font-size: 20px;
+}
